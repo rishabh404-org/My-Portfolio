@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rishabh — Senior Full-Stack Engineer & UI/UX Architect</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Senior Full-Stack Engineer & UI/UX Architect with 5+ years of experience building scalable cloud applications, resilient microservices, and pixel-perfect digital experiences." />
+  <meta name="keywords" content="Full-Stack Engineer, UI/UX Architect, Software Engineer, Next.js, React, TypeScript, Node.js, Go, Python, Cloud Architecture, Portfolio" />
+  <meta name="author" content="Rishabh" />
+  <meta property="og:title" content="Rishabh — Senior Full-Stack Engineer & UI/UX Architect" />
+  <meta property="og:description" content="Engineering high-scale cloud platforms & crafting refined digital products." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23090a0f'/><text x='50%' y='68%' font-size='56' font-weight='bold' text-anchor='middle' fill='%236366f1' font-family='sans-serif'>R</text></svg>" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rishabh",
+    "jobTitle": "Senior Full-Stack Engineer & UI/UX Architect",
+    "url": "https://rishabh.dev",
+    "sameAs": [
+      "https://github.com",
+      "https://linkedin.com",
+      "https://twitter.com"
+    ],
+    "knowsAbout": ["Full-Stack Web Development", "Cloud Architecture", "UI/UX Design Systems", "Distributed Systems", "AI Workflows"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Ambient Background Canvas & Confetti Canvas -->
+  <canvas id="bg-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scroll-progress-indicator"></div>
+
+  <!-- Global Header Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-container" aria-label="Main Navigation">
+        <a href="#hero" class="nav-logo" aria-label="Rishabh Home">
+          <div class="nav-logo-icon">R</div>
+          <span>Rishabh</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="nav-links-wrap" id="nav-links-wrap">
+          <a href="#hero" class="nav-link active">Overview</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#testimonials" class="nav-link">Testimonials</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+
+        <!-- Right Side Nav Actions -->
+        <div class="nav-actions">
+          <!-- Command Palette Shortcut Pill -->
+          <button class="cmd-k-badge" data-action="open-palette" title="Quick Search (Cmd+K)">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <span>⌘K</span>
+          </button>
+
+          <!-- Light/Dark Mode Toggle -->
+          <button class="nav-icon-btn" id="theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Theme">
+            <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          </button>
+
+          <!-- Sound FX Audio Toggle -->
+          <button class="nav-icon-btn" id="sound-toggle-btn" title="Toggle Micro-Audio Sound Effects" aria-label="Toggle Sound">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          </button>
+
+          <!-- Resume Modal Trigger -->
+          <button class="btn btn-sm btn-outline" data-action="open-resume" title="View Resume">
+            <span>Resume</span>
+          </button>
+
+          <!-- Hire Me Primary CTA -->
+          <a href="#contact" class="btn btn-sm btn-primary">
+            <span>Get in touch</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         HERO SECTION (STRONG BOLD TYPOGRAPHY & CLEAN SPACING)
+         ========================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-content reveal-on-scroll">
+          
+          <!-- Availability Status Pill -->
+          <div class="availability-pill">
+            <span class="pulse-dot"></span>
+            <span>Available for Senior Roles & Select Projects</span>
+          </div>
+
+          <!-- Main Authoritative Headline -->
+          <h1 class="hero-headline text-gradient">
+            Senior Full-Stack Engineer & <br />
+            <span class="rotating-role-box" id="hero-rotating-role">Product Architect</span>
+          </h1>
+
+          <!-- Tagline Description -->
+          <p class="hero-tagline">
+            I design and build high-performance distributed backends, resilient cloud infrastructures, and polished user interfaces.
+          </p>
+
+          <!-- Primary Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Featured Projects</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#about" class="btn btn-outline">
+              <span>About & Terminal</span>
+            </a>
+            <button class="btn btn-ghost" data-action="copy-email">
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Hero Metrics Strip -->
+          <div class="hero-stats-strip">
+            <div class="hero-stat-card bento-glass-card">
+              <div class="hero-stat-num text-gradient">5+</div>
+              <div class="hero-stat-label">Years Experience</div>
+            </div>
+            <div class="hero-stat-card bento-glass-card">
+              <div class="hero-stat-num text-gradient">32+</div>
+              <div class="hero-stat-label">Production Apps</div>
+            </div>
+            <div class="hero-stat-card bento-glass-card">
+              <div class="hero-stat-num text-gradient">2.4M+</div>
+              <div class="hero-stat-label">Users Scaled</div>
+            </div>
+            <div class="hero-stat-card bento-glass-card">
+              <div class="hero-stat-num text-gradient">99.98%</div>
+              <div class="hero-stat-label">System Uptime</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ABOUT & BENTO GRID
+         ========================================================= -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">Overview</div>
+          <h2 class="section-title text-gradient">Engineering Philosophy</h2>
+          <p class="section-subtitle">A disciplined focus on scalable system architecture, clean type-safe code, and minimalist product design.</p>
+        </div>
+
+        <div class="bento-main-grid">
+          
+          <!-- Card 1: Bio & Principles (Span 8) -->
+          <div class="bento-glass-card bento-col-8 reveal-on-scroll">
+            <div class="bento-avatar-row">
+              <div class="bento-avatar-img">R</div>
+              <div>
+                <h3 class="bento-bio-heading">Rishabh</h3>
+                <div class="bento-bio-role">Lead Full-Stack Engineer & Architect</div>
+              </div>
+            </div>
+            <p class="bento-bio-body">
+              Over the past 5+ years, I have architected and deployed high-throughput backend services and modern frontend applications for global teams. I prioritize strict typing, resilient error boundaries, fast sub-100ms API responses, and clean accessible design.
+            </p>
+            <div class="bento-principles-grid">
+              <div class="principle-item">
+                <div class="principle-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <div>
+                  <div class="principle-title">Performance-First</div>
+                  <div class="principle-desc">Optimizing p99 latencies, SQL indexing, and 60fps client animations.</div>
+                </div>
+              </div>
+              <div class="principle-item">
+                <div class="principle-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <div class="principle-title">Resilient Architecture</div>
+                  <div class="principle-desc">Fault-tolerant distributed microservices, auto-recovery, and observability.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Live Clock & Availability (Span 4) -->
+          <div class="bento-glass-card bento-col-4 reveal-on-scroll reveal-delay-1">
+            <div class="section-tag" style="margin-bottom: 0.75rem;">Timezone</div>
+            <div class="bento-clock-val" id="bento-live-clock">--:--:-- IST</div>
+            <div class="bento-clock-loc">📍 Bengaluru, India (UTC +5:30)</div>
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+              <div style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.25rem;">Working With</div>
+              <div style="font-size: 0.88rem; font-weight: 600; color: var(--text-primary);">
+                Teams in North America (PST/EST), Europe (CET) & APAC.
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Embedded Developer Terminal (Span 12) -->
+          <div class="bento-col-12 reveal-on-scroll">
+            <div class="terminal-card" id="terminal-container">
+              <div class="terminal-header-bar">
+                <div class="terminal-controls-dots">
+                  <span class="term-dot red"></span>
+                  <span class="term-dot yellow"></span>
+                  <span class="term-dot green"></span>
+                </div>
+                <div class="terminal-title-text">rishabh@portfolio:~</div>
+                <div style="font-size: 0.7rem; color: var(--text-muted);">Type 'help' for commands</div>
+              </div>
+              <div class="terminal-output"></div>
+              <div class="terminal-input-row">
+                <span class="terminal-prompt">guest@portfolio:~$</span>
+                <input type="text" class="terminal-input" placeholder="Type a command ('projects', 'skills', 'whoami')..." autocomplete="off" spellcheck="false" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FEATURED PROJECTS & CASE STUDIES
+         ========================================================= -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">Featured Work</div>
+          <h2 class="section-title text-gradient">Production Case Studies</h2>
+          <p class="section-subtitle">Real-world applications handling enterprise throughput, high volume, and critical workflows.</p>
+        </div>
+
+        <!-- Filter Pills Bar -->
+        <div class="projects-filter-bar reveal-on-scroll">
+          <button class="project-filter-btn active" data-filter="all">All Projects</button>
+          <button class="project-filter-btn" data-filter="ai">AI & LLM</button>
+          <button class="project-filter-btn" data-filter="cloud">Cloud & DevOps</button>
+          <button class="project-filter-btn" data-filter="fullstack">Full-Stack</button>
+          <button class="project-filter-btn" data-filter="design">Design Systems</button>
+        </div>
+
+        <!-- Projects Grid Container -->
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         TECHNICAL SKILLS & COMPETENCY MATRIX
+         ========================================================= -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">Capabilities</div>
+          <h2 class="section-title text-gradient">Technical Competencies</h2>
+          <p class="section-subtitle">Core proficiency across languages, modern frameworks, data storage, and cloud primitives.</p>
+        </div>
+
+        <div id="skills-container" class="reveal-on-scroll"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         WORK EXPERIENCE & TIMELINE
+         ========================================================= -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">Experience</div>
+          <h2 class="section-title text-gradient">Career History</h2>
+          <p class="section-subtitle">Track record of building core architectures, leading developer teams, and shipping at scale.</p>
+        </div>
+
+        <div class="timeline-container reveal-on-scroll" id="experience-timeline"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SERVICES & PROJECT SCOPE ESTIMATOR
+         ========================================================= -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">Services</div>
+          <h2 class="section-title text-gradient">Services & Advisory</h2>
+          <p class="section-subtitle">Full-cycle product engineering, scalable cloud architecture, and technical consulting.</p>
+        </div>
+
+        <div class="services-grid reveal-on-scroll" id="services-grid"></div>
+
+        <!-- Interactive Project Scope Estimator Widget -->
+        <div class="project-estimator-box reveal-on-scroll" id="project-estimator-box">
+          <div class="estimator-header">
+            <h3 class="estimator-title">Scope & Timeline Calculator</h3>
+            <p class="estimator-desc">Select the components your project requires to calculate an estimated delivery window and budget.</p>
+          </div>
+          <div class="estimator-grid">
+            <div class="estimator-options-list">
+              <label class="estimator-check-label">
+                <input type="checkbox" checked data-cost="2800" data-days="8" />
+                <span>Modern Frontend Web App (Next.js / TypeScript / Tailwind)</span>
+              </label>
+              <label class="estimator-check-label">
+                <input type="checkbox" checked data-cost="2400" data-days="7" />
+                <span>REST / GraphQL Backend API & Relational Database (PostgreSQL)</span>
+              </label>
+              <label class="estimator-check-label">
+                <input type="checkbox" data-cost="1800" data-days="5" />
+                <span>Custom Figma Design System & Component Library</span>
+              </label>
+              <label class="estimator-check-label">
+                <input type="checkbox" data-cost="2200" data-days="6" />
+                <span>AI / LLM Integration, Vector Search (RAG) & Agent Pipelines</span>
+              </label>
+              <label class="estimator-check-label">
+                <input type="checkbox" data-cost="1600" data-days="4" />
+                <span>Automated CI/CD & Cloud Deployment (Docker / AWS)</span>
+              </label>
+
+              <div style="margin-top: 0.85rem;">
+                <label style="font-size: 0.82rem; font-weight: 600; color: var(--text-primary); display: block; margin-bottom: 0.35rem;">Complexity Tier:</label>
+                <select id="est-complexity" class="form-select">
+                  <option value="1.0">Standard MVP / Feature Sprint (1.0x)</option>
+                  <option value="1.3">High-Concurrency / FinTech Security (1.3x)</option>
+                  <option value="1.6">Enterprise Multi-Tenant System (1.6x)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="estimator-summary-panel">
+              <div>
+                <div class="est-metric-group">
+                  <div class="est-label">Estimated Delivery</div>
+                  <div class="est-val" id="est-timeline-val">2 - 3 Weeks</div>
+                </div>
+                <div class="est-metric-group">
+                  <div class="est-label">Estimated Investment</div>
+                  <div class="est-val" id="est-cost-val">$5,200</div>
+                </div>
+              </div>
+              <a href="#contact" class="btn btn-primary" style="width: 100%;">
+                <span>Discuss This Scope</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ACHIEVEMENTS & CERTIFICATIONS
+         ========================================================= -->
+    <section class="achievements-section" id="achievements">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">Credentials</div>
+          <h2 class="section-title text-gradient">Certifications & Honors</h2>
+          <p class="section-subtitle">Verified cloud certifications, hackathon awards, and open-source contributions.</p>
+        </div>
+
+        <div class="achievements-grid reveal-on-scroll" id="achievements-grid"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         TESTIMONIALS & REVIEWS
+         ========================================================= -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">Recommendations</div>
+          <h2 class="section-title text-gradient">Client & Leader Feedback</h2>
+          <p class="section-subtitle">What engineering leaders, founders, and product managers say about collaborating with me.</p>
+        </div>
+
+        <div class="testimonials-slider-box reveal-on-scroll" id="testimonials-slider"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FREQUENTLY ASKED QUESTIONS
+         ========================================================= -->
+    <section class="faqs-section" id="faqs">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">FAQ</div>
+          <h2 class="section-title text-gradient">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Answers regarding hiring, contracts, stack preferences, and timelines.</p>
+        </div>
+
+        <div class="faqs-container reveal-on-scroll" id="faqs-container"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACT & DIRECT EMAIL SYSTEM
+         ========================================================= -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">Contact</div>
+          <h2 class="section-title text-gradient">Let's Connect</h2>
+          <p class="section-subtitle">Have a project in mind, want to collaborate, or just want to say hello? Send me a message.</p>
+        </div>
+
+        <div class="contact-layout-grid reveal-on-scroll">
+          
+          <!-- Left Info: Let's work together -->
+          <div class="contact-info-panel bento-glass-card">
+            <div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 0.4rem;">Let's work together</h3>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.55;">
+                I am currently open to senior/lead full-stack engineering roles, high-impact freelance contracts, and architecture advisory.
+              </p>
+
+              <div class="contact-direct-cards">
+                <a href="mailto:rishabhkumar3800@gmail.com" class="contact-direct-card" style="text-decoration:none; color:inherit;" title="Click to send email directly">
+                  <div class="contact-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </div>
+                  <div>
+                    <div class="contact-direct-lbl">Email Address</div>
+                    <div class="contact-direct-val">rishabhkumar3800@gmail.com</div>
+                  </div>
+                </a>
+
+                <div class="contact-direct-card">
+                  <div class="contact-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                  </div>
+                  <div>
+                    <div class="contact-direct-lbl">Schedule Video Call</div>
+                    <div class="contact-direct-val">calendly.com/rishabh-dev</div>
+                  </div>
+                </div>
+
+                <div class="contact-direct-card">
+                  <div class="contact-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <div class="contact-direct-lbl">Location</div>
+                    <div class="contact-direct-val">Bengaluru • Available Globally</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.65rem;">Connect on Socials</div>
+              <div class="contact-social-strip">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="GitHub">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="LinkedIn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="Twitter / X">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Secure Direct Contact Form -->
+          <div class="contact-form-panel bento-glass-card">
+            <form id="contact-form" novalidate>
+              
+              <!-- Honeypot field (hidden from real users to catch spam bots) -->
+              <input type="text" name="_gotcha" id="contact-gotcha" class="honeypot-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Full Name *</label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Sarah Jenkins" autocomplete="name" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address *</label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. sarah@company.com" autocomplete="email" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Subject *</label>
+                <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Project Inquiry / New Opportunity" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Message *</label>
+                <textarea id="contact-message" name="message" class="form-textarea" placeholder="Tell me about your goals, stack, timeline, or open role..." rows="5" required></textarea>
+              </div>
+
+              <!-- Live Accessible Status Alert Box -->
+              <div id="contact-status-alert" class="contact-status-alert" role="alert" aria-live="polite"></div>
+
+              <button type="submit" class="btn btn-primary contact-submit-btn" id="contact-submit-btn">
+                <span class="btn-text">Send Message</span>
+              </button>
+
+              <!-- Direct Email Alternative Fallback -->
+              <div class="direct-email-fallback">
+                <span>Prefer email? </span>
+                <a href="mailto:rishabhkumar3800@gmail.com" class="direct-email-link">Send me an email directly</a>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       GLOBAL SITE FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <div>
+          <div class="nav-logo" style="margin-bottom: 0.5rem;">
+            <div class="nav-logo-icon">R</div>
+            <span>Rishabh</span>
+          </div>
+          <p class="footer-brand-p">
+            Senior Full-Stack Engineer & UI/UX Architect building scalable cloud products.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">More</div>
+          <ul class="footer-links">
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Theme</div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="project-filter-btn" id="footer-theme-dark">Dark</button>
+            <button class="project-filter-btn" id="footer-theme-light">Light</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 Rishabh. All rights reserved.</div>
+        <div>
+          <a href="#hero" style="color: var(--accent-primary);">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       GLOBAL MODAL: CASE STUDY DEEP DIVE
+       ========================================================= -->
+  <div class="modal-wrapper" id="case-study-modal" role="dialog" aria-modal="true" aria-labelledby="cs-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog-box">
+      <button class="modal-close-btn" aria-label="Close Case Study">✕</button>
+      <div id="case-study-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       GLOBAL MODAL: FULL RESUME VIEWER (PRINTABLE)
+       ========================================================= -->
+  <div class="modal-wrapper" id="resume-modal" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog-box resume-modal-dialog">
+      <button class="modal-close-btn" aria-label="Close Resume">✕</button>
+      
+      <div class="resume-paper">
+        <div class="resume-header">
+          <div>
+            <h1 class="resume-name">Rishabh</h1>
+            <div class="resume-title">Senior Full-Stack Engineer & UI/UX Architect</div>
+          </div>
+          <div class="resume-contact-info">
+            <div>Bengaluru, India (Remote Worldwide)</div>
+            <div>rishabhkumar3800@gmail.com</div>
+            <div>github.com/rishabh-dev • rishabh.dev</div>
+          </div>
+        </div>
+
+        <div class="resume-sec">
+          <div class="resume-sec-title">Executive Summary</div>
+          <p style="font-size: 0.88rem; color: #334155; line-height: 1.6;">
+            Senior Full-Stack Engineer with 5+ years of experience engineering high-concurrency cloud microservices, distributed data pipelines, and responsive frontend applications. Expert in Next.js, React, TypeScript, Node.js, Go, PostgreSQL, Redis, and AWS.
+          </p>
+        </div>
+
+        <div class="resume-sec">
+          <div class="resume-sec-title">Core Competencies</div>
+          <div style="font-size: 0.85rem; color: #334155; line-height: 1.6;">
+            <strong>Languages & Frontend:</strong> TypeScript, JavaScript (ESNext), Go, Python, React, Next.js 14/15, Tailwind CSS, HTML5/CSS3, WebGL.<br />
+            <strong>Backend & Cloud:</strong> Node.js, Express, NestJS, FastAPI, PostgreSQL, Redis, TimescaleDB, Docker, Kubernetes, AWS, GCP, Kafka, CI/CD.<br />
+            <strong>UI/UX & Systems:</strong> Figma Design Systems, WCAG 2.1 AAA Accessibility, REST & GraphQL API Design, System Architecture.
+          </div>
+        </div>
+
+        <div class="resume-sec">
+          <div class="resume-sec-title">Professional Experience</div>
+          
+          <div class="resume-item">
+            <div class="resume-item-top">
+              <span>Lead Full-Stack Engineer & Architect</span>
+              <span>2023 — Present</span>
+            </div>
+            <div class="resume-item-sub">Cognitive Scale Labs • Bengaluru / Hybrid</div>
+            <ul class="resume-item-bullets">
+              <li>Architected enterprise LLM workflow runtime supporting 10k+ concurrent agent DAG executions with p99 latency &lt;80ms.</li>
+              <li>Reduced cloud infrastructure costs by 38% through containerized auto-scaling and Redis caching layers.</li>
+              <li>Mentored 12 engineers across product squads; enforced testing suites achieving 94% code coverage.</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <div class="resume-item-top">
+              <span>Senior Software Engineer</span>
+              <span>2021 — 2023</span>
+            </div>
+            <div class="resume-item-sub">Aether Cloud Systems • Remote</div>
+            <ul class="resume-item-bullets">
+              <li>Engineered real-time APM telemetry dashboards rendering 250k metrics/sec at 60 FPS using HTML5 Canvas & WebGL.</li>
+              <li>Refactored critical transaction microservice, increasing overall throughput by 300% without hardware expansion.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-sec">
+          <div class="resume-sec-title">Certifications & Honors</div>
+          <div style="font-size: 0.85rem; color: #334155;">
+            • AWS Certified Solutions Architect (2024)<br />
+            • 1st Place Winner — Global AI Hackathon (Devpost / Techstars, 2023)<br />
+            • Meta Certified Frontend Developer (Meta, 2022)
+          </div>
+        </div>
+      </div>
+
+      <div class="resume-modal-actions">
+        <button class="btn btn-outline" id="print-resume-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+          <span>Print / Save as PDF</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       GLOBAL MODAL: COMMAND PALETTE (Cmd + K)
+       ========================================================= -->
+  <div class="palette-modal-backdrop" id="command-palette-modal" role="dialog" aria-modal="true">
+    <div class="palette-modal-box">
+      <div class="palette-search-header">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="palette-input" class="palette-input" placeholder="Type a command or search sections, projects..." autocomplete="off" />
+      </div>
+      <div class="palette-results-list" id="palette-results"></div>
+      <div class="palette-footer-bar">
+        <div>Navigate <kbd>↑</kbd> <kbd>↓</kbd></div>
+        <div>Select <kbd>↵</kbd></div>
+        <div>Close <kbd>ESC</kbd></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/sound-effects.js"></script>
+  <script src="js/canvas-bg.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/command-palette.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

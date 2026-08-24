@@ -1,0 +1,13 @@
+{
+  "name": "rishabh-portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Website with Resend Email Integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["portfolio", "full-stack", "resend"],
+  "author": "Rishabh",
+  "license": "MIT"
+}
